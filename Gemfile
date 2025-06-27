@@ -40,7 +40,12 @@ gem "thruster", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
+gem 'byebug'
+
 group :development, :test do
+  # Load environment variables from .env file
+  gem 'dotenv-rails'
+
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
 
@@ -60,4 +65,14 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
+
+  # Minitest and extensions
+  gem 'minitest-reporters'
+  gem 'minitest-stub-const', '~> 0.5'
+  gem 'minitest-stub_any_instance', '~> 1.0.1'
+  gem "minitest-focus", "~> 1.3"
+  gem 'minitest-ci'
+  gem 'mocha', require: false
+  gem 'simplecov'
+  gem 'webmock'
 end

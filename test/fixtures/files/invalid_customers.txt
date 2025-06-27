@@ -1,0 +1,2 @@
+invalid json line without proper format
+{"user_id": "invalid","name": "Test User"
